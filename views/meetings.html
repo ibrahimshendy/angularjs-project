@@ -1,0 +1,13 @@
+<a href="" ng-click="logout()" >Logout</a>
+<h1>Meetings</h1>
+<p>All Users Here.</p>
+	<input type="text" name="user" ng-model="user" placeholder="Search" class="form-control" >
+	<hr/>
+<ul ng-repeat="user in users | filter : user" >
+	<div class="panel panel-default">
+	  <div class="panel-heading">{{ user.name }}</div>
+	  <div class="panel-body">
+	    {{ user.email }}
+	  </div>
+	</div>
+</ul>

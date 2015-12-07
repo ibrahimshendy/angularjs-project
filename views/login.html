@@ -1,0 +1,22 @@
+<section class="login">
+	<form class="form-horizontal" name="myform" ng-submit="login(user)" novalidate >
+		<p>Log-in to access site features.</p>
+		<p> {{ msg }} </p>
+		<div class="form-group">
+			<input type="email" name="email" class="form-control" placeholder="Email" autofocus
+			ng-model="user.email" ng-required="true">
+
+			<div class="alert alert-danger" role="alert" ng-show="myform.email.$invalid && myform.email.$touched" > Must be a valid email </div>
+		</div>
+		<div class="form-group">
+			<input type="password" class="form-control" name="password" placeholder="password" 
+			ng-model="user.password" ng-required="true">
+
+			<div class="alert alert-danger" role="alert" ng-show="myform.password.$invalid && myform.password.$touched" > password is required </div>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-default" ng-disabled="myform.$invalid" >Login</button>
+		</div>
+		<p><a href="#/register">Register</a></p>
+	</form>
+</section>
