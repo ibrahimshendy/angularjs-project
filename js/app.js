@@ -1,5 +1,5 @@
 /**
- *  Copy right @ ibrahim shendy
+ *  Copyright @ ibrahim shendy
  */
 var myApp = angular.module('myApp', ['ngRoute' , 'appControllers']);
 
